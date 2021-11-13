@@ -1,0 +1,674 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ADCCE70A270A635F006A26B6 /* WalkItApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCCE709270A635F006A26B6 /* WalkItApp.swift */; };
+		ADCCE70C270A635F006A26B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCCE70B270A635F006A26B6 /* ContentView.swift */; };
+		ADCCE70E270A6362006A26B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADCCE70D270A6362006A26B6 /* Assets.xcassets */; };
+		ADCCE711270A6362006A26B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADCCE710270A6362006A26B6 /* Preview Assets.xcassets */; };
+		ADCCE71C270A6363006A26B6 /* WalkItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCCE71B270A6363006A26B6 /* WalkItTests.swift */; };
+		ADCCE727270A6363006A26B6 /* WalkItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCCE726270A6363006A26B6 /* WalkItUITests.swift */; };
+		ADDE2C95273F9AC700EE9BA0 /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDE2C94273F9AC700EE9BA0 /* LocationHelper.swift */; };
+		CE0997A1270B973B0064069D /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0997A0270B973B0064069D /* MapScreen.swift */; };
+		CE10B215272CA66A00030E7E /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10B214272CA66A00030E7E /* SettingsScreen.swift */; };
+		CE10B217272CA6D800030E7E /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10B216272CA6D800030E7E /* Token.swift */; };
+		CE10B219272CA81D00030E7E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10B218272CA81D00030E7E /* Player.swift */; };
+		CE498B9E27398FAC00D031B7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE498B9D27398FAC00D031B7 /* LoginView.swift */; };
+		CE498BA027398FBB00D031B7 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE498B9F27398FBB00D031B7 /* SignUpView.swift */; };
+		CEB6E8672739CA0E00F79F91 /* PlayerDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEB6E8652739CA0E00F79F91 /* PlayerDB.xcdatamodeld */; };
+		CEB6E8692739CAA600F79F91 /* PlayerMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB6E8682739CAA600F79F91 /* PlayerMO.swift */; };
+		CEB6E86B2739CADB00F79F91 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB6E86A2739CADB00F79F91 /* Persistence.swift */; };
+		CEB6E86D2739CAFB00F79F91 /* CoreDBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB6E86C2739CAFB00F79F91 /* CoreDBHelper.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ADCCE718270A6363006A26B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ADCCE6FE270A635F006A26B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADCCE705270A635F006A26B6;
+			remoteInfo = WalkIt;
+		};
+		ADCCE723270A6363006A26B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ADCCE6FE270A635F006A26B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADCCE705270A635F006A26B6;
+			remoteInfo = WalkIt;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ADCCE706270A635F006A26B6 /* WalkIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADCCE709270A635F006A26B6 /* WalkItApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkItApp.swift; sourceTree = "<group>"; };
+		ADCCE70B270A635F006A26B6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ADCCE70D270A6362006A26B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ADCCE710270A6362006A26B6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ADCCE712270A6362006A26B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADCCE717270A6363006A26B6 /* WalkItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalkItTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADCCE71B270A6363006A26B6 /* WalkItTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkItTests.swift; sourceTree = "<group>"; };
+		ADCCE71D270A6363006A26B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADCCE722270A6363006A26B6 /* WalkItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalkItUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADCCE726270A6363006A26B6 /* WalkItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkItUITests.swift; sourceTree = "<group>"; };
+		ADCCE728270A6363006A26B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADDE2C94273F9AC700EE9BA0 /* LocationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
+		CE0997A0270B973B0064069D /* MapScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
+		CE10B214272CA66A00030E7E /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
+		CE10B216272CA6D800030E7E /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		CE10B218272CA81D00030E7E /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		CE498B9D27398FAC00D031B7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CE498B9F27398FBB00D031B7 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		CEB6E8662739CA0E00F79F91 /* PlayerDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlayerDB.xcdatamodel; sourceTree = "<group>"; };
+		CEB6E8682739CAA600F79F91 /* PlayerMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerMO.swift; sourceTree = "<group>"; };
+		CEB6E86A2739CADB00F79F91 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Persistence.swift; path = WalkIt/Models/Persistence.swift; sourceTree = SOURCE_ROOT; };
+		CEB6E86C2739CAFB00F79F91 /* CoreDBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDBHelper.swift; path = WalkIt/Models/CoreDBHelper.swift; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ADCCE703270A635F006A26B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADCCE714270A6363006A26B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADCCE71F270A6363006A26B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ADCCE6FD270A635F006A26B6 = {
+			isa = PBXGroup;
+			children = (
+				ADCCE708270A635F006A26B6 /* WalkIt */,
+				ADCCE71A270A6363006A26B6 /* WalkItTests */,
+				ADCCE725270A6363006A26B6 /* WalkItUITests */,
+				ADCCE707270A635F006A26B6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ADCCE707270A635F006A26B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ADCCE706270A635F006A26B6 /* WalkIt.app */,
+				ADCCE717270A6363006A26B6 /* WalkItTests.xctest */,
+				ADCCE722270A6363006A26B6 /* WalkItUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ADCCE708270A635F006A26B6 /* WalkIt */ = {
+			isa = PBXGroup;
+			children = (
+				ADDE2C93273F9AB700EE9BA0 /* Helpers */,
+				CEB6E8652739CA0E00F79F91 /* PlayerDB.xcdatamodeld */,
+				CE10B213272CA5B900030E7E /* Controllers */,
+				CE10B212272CA5B100030E7E /* Views */,
+				CE10B211272CA5A300030E7E /* Models */,
+				ADCCE709270A635F006A26B6 /* WalkItApp.swift */,
+				ADCCE70D270A6362006A26B6 /* Assets.xcassets */,
+				ADCCE712270A6362006A26B6 /* Info.plist */,
+				ADCCE70F270A6362006A26B6 /* Preview Content */,
+			);
+			path = WalkIt;
+			sourceTree = "<group>";
+		};
+		ADCCE70F270A6362006A26B6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				ADCCE710270A6362006A26B6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ADCCE71A270A6363006A26B6 /* WalkItTests */ = {
+			isa = PBXGroup;
+			children = (
+				ADCCE71B270A6363006A26B6 /* WalkItTests.swift */,
+				ADCCE71D270A6363006A26B6 /* Info.plist */,
+			);
+			path = WalkItTests;
+			sourceTree = "<group>";
+		};
+		ADCCE725270A6363006A26B6 /* WalkItUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ADCCE726270A6363006A26B6 /* WalkItUITests.swift */,
+				ADCCE728270A6363006A26B6 /* Info.plist */,
+			);
+			path = WalkItUITests;
+			sourceTree = "<group>";
+		};
+		ADDE2C93273F9AB700EE9BA0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				ADDE2C94273F9AC700EE9BA0 /* LocationHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CE10B211272CA5A300030E7E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE10B216272CA6D800030E7E /* Token.swift */,
+				CE10B218272CA81D00030E7E /* Player.swift */,
+				CEB6E8682739CAA600F79F91 /* PlayerMO.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE10B212272CA5B100030E7E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ADCCE70B270A635F006A26B6 /* ContentView.swift */,
+				CE0997A0270B973B0064069D /* MapScreen.swift */,
+				CE10B214272CA66A00030E7E /* SettingsScreen.swift */,
+				CE498B9D27398FAC00D031B7 /* LoginView.swift */,
+				CE498B9F27398FBB00D031B7 /* SignUpView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE10B213272CA5B900030E7E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CEB6E86A2739CADB00F79F91 /* Persistence.swift */,
+				CEB6E86C2739CAFB00F79F91 /* CoreDBHelper.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ADCCE705270A635F006A26B6 /* WalkIt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADCCE72B270A6363006A26B6 /* Build configuration list for PBXNativeTarget "WalkIt" */;
+			buildPhases = (
+				ADCCE702270A635F006A26B6 /* Sources */,
+				ADCCE703270A635F006A26B6 /* Frameworks */,
+				ADCCE704270A635F006A26B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WalkIt;
+			productName = WalkIt;
+			productReference = ADCCE706270A635F006A26B6 /* WalkIt.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ADCCE716270A6363006A26B6 /* WalkItTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADCCE72E270A6363006A26B6 /* Build configuration list for PBXNativeTarget "WalkItTests" */;
+			buildPhases = (
+				ADCCE713270A6363006A26B6 /* Sources */,
+				ADCCE714270A6363006A26B6 /* Frameworks */,
+				ADCCE715270A6363006A26B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ADCCE719270A6363006A26B6 /* PBXTargetDependency */,
+			);
+			name = WalkItTests;
+			productName = WalkItTests;
+			productReference = ADCCE717270A6363006A26B6 /* WalkItTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ADCCE721270A6363006A26B6 /* WalkItUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADCCE731270A6363006A26B6 /* Build configuration list for PBXNativeTarget "WalkItUITests" */;
+			buildPhases = (
+				ADCCE71E270A6363006A26B6 /* Sources */,
+				ADCCE71F270A6363006A26B6 /* Frameworks */,
+				ADCCE720270A6363006A26B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ADCCE724270A6363006A26B6 /* PBXTargetDependency */,
+			);
+			name = WalkItUITests;
+			productName = WalkItUITests;
+			productReference = ADCCE722270A6363006A26B6 /* WalkItUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ADCCE6FE270A635F006A26B6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					ADCCE705270A635F006A26B6 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					ADCCE716270A6363006A26B6 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = ADCCE705270A635F006A26B6;
+					};
+					ADCCE721270A6363006A26B6 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = ADCCE705270A635F006A26B6;
+					};
+				};
+			};
+			buildConfigurationList = ADCCE701270A635F006A26B6 /* Build configuration list for PBXProject "WalkIt" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ADCCE6FD270A635F006A26B6;
+			productRefGroup = ADCCE707270A635F006A26B6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ADCCE705270A635F006A26B6 /* WalkIt */,
+				ADCCE716270A6363006A26B6 /* WalkItTests */,
+				ADCCE721270A6363006A26B6 /* WalkItUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ADCCE704270A635F006A26B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADCCE711270A6362006A26B6 /* Preview Assets.xcassets in Resources */,
+				ADCCE70E270A6362006A26B6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADCCE715270A6363006A26B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADCCE720270A6363006A26B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ADCCE702270A635F006A26B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEB6E86B2739CADB00F79F91 /* Persistence.swift in Sources */,
+				CEB6E8672739CA0E00F79F91 /* PlayerDB.xcdatamodeld in Sources */,
+				CE10B215272CA66A00030E7E /* SettingsScreen.swift in Sources */,
+				CE498B9E27398FAC00D031B7 /* LoginView.swift in Sources */,
+				CEB6E86D2739CAFB00F79F91 /* CoreDBHelper.swift in Sources */,
+				CE10B217272CA6D800030E7E /* Token.swift in Sources */,
+				CE0997A1270B973B0064069D /* MapScreen.swift in Sources */,
+				ADDE2C95273F9AC700EE9BA0 /* LocationHelper.swift in Sources */,
+				CE498BA027398FBB00D031B7 /* SignUpView.swift in Sources */,
+				ADCCE70C270A635F006A26B6 /* ContentView.swift in Sources */,
+				CE10B219272CA81D00030E7E /* Player.swift in Sources */,
+				CEB6E8692739CAA600F79F91 /* PlayerMO.swift in Sources */,
+				ADCCE70A270A635F006A26B6 /* WalkItApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADCCE713270A6363006A26B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADCCE71C270A6363006A26B6 /* WalkItTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADCCE71E270A6363006A26B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADCCE727270A6363006A26B6 /* WalkItUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ADCCE719270A6363006A26B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADCCE705270A635F006A26B6 /* WalkIt */;
+			targetProxy = ADCCE718270A6363006A26B6 /* PBXContainerItemProxy */;
+		};
+		ADCCE724270A6363006A26B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADCCE705270A635F006A26B6 /* WalkIt */;
+			targetProxy = ADCCE723270A6363006A26B6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		ADCCE729270A6363006A26B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ADCCE72A270A6363006A26B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ADCCE72C270A6363006A26B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"WalkIt/Preview Content\"";
+				DEVELOPMENT_TEAM = V3M5A53GX3;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = WalkIt/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.edilloarzen.WalkIt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ADCCE72D270A6363006A26B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"WalkIt/Preview Content\"";
+				DEVELOPMENT_TEAM = V3M5A53GX3;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = WalkIt/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.edilloarzen.WalkIt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		ADCCE72F270A6363006A26B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V3M5A53GX3;
+				INFOPLIST_FILE = WalkItTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.edilloarzen.WalkItTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WalkIt.app/WalkIt";
+			};
+			name = Debug;
+		};
+		ADCCE730270A6363006A26B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V3M5A53GX3;
+				INFOPLIST_FILE = WalkItTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.edilloarzen.WalkItTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WalkIt.app/WalkIt";
+			};
+			name = Release;
+		};
+		ADCCE732270A6363006A26B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V3M5A53GX3;
+				INFOPLIST_FILE = WalkItUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.edilloarzen.WalkItUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WalkIt;
+			};
+			name = Debug;
+		};
+		ADCCE733270A6363006A26B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V3M5A53GX3;
+				INFOPLIST_FILE = WalkItUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.edilloarzen.WalkItUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WalkIt;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ADCCE701270A635F006A26B6 /* Build configuration list for PBXProject "WalkIt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADCCE729270A6363006A26B6 /* Debug */,
+				ADCCE72A270A6363006A26B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADCCE72B270A6363006A26B6 /* Build configuration list for PBXNativeTarget "WalkIt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADCCE72C270A6363006A26B6 /* Debug */,
+				ADCCE72D270A6363006A26B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADCCE72E270A6363006A26B6 /* Build configuration list for PBXNativeTarget "WalkItTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADCCE72F270A6363006A26B6 /* Debug */,
+				ADCCE730270A6363006A26B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADCCE731270A6363006A26B6 /* Build configuration list for PBXNativeTarget "WalkItUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADCCE732270A6363006A26B6 /* Debug */,
+				ADCCE733270A6363006A26B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CEB6E8652739CA0E00F79F91 /* PlayerDB.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CEB6E8662739CA0E00F79F91 /* PlayerDB.xcdatamodel */,
+			);
+			currentVersion = CEB6E8662739CA0E00F79F91 /* PlayerDB.xcdatamodel */;
+			path = PlayerDB.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = ADCCE6FE270A635F006A26B6 /* Project object */;
+}
