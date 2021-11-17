@@ -53,19 +53,33 @@ struct ContentView: View {
                     
                 }
                 
+                Group{
+                    Spacer()
+                    Button(action: {
+                            self.screenSelection = 2;
+                    }){
+                        Text("Edit Profile")
+                            .foregroundColor(Color.white)
+                            .font(.title2)
+                            .padding(10)
+                    }
+                    .background(Color.blue)
+                    .cornerRadius(15)
                 
-                Spacer()
-                Button(action: {
-                        self.screenSelection = 2;
-                }){
-                    Text("Edit Profile")
-                        .foregroundColor(Color.white)
-                        .font(.title2)
-                        .padding(10)
+                    Spacer()
+                
+                    Button(action: {
+                        self.screenSelection = 1;
+                    }){
+                        Text("View Map")
+                            .foregroundColor(Color.white)
+                            .font(.title2)
+                            .padding(10)
+                        }
+                    .background(Color.blue)
+                    .cornerRadius(15)
+                    Spacer()
                 }
-                .background(Color.blue)
-                .cornerRadius(15)
-                Spacer()
             }
         }
     }

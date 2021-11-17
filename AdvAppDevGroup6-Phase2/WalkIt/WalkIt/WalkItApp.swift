@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct WalkItApp: App {
+    let locationHelper = LocationHelper()
+
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(locationHelper)
         }
     }
 }
