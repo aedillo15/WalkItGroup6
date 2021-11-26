@@ -10,11 +10,12 @@ import SwiftUI
 struct SignUpView: View {
     
     @EnvironmentObject var coreDBHelper : CoreDBHelper
-
-    @State private var tfEmail: String = ""
-    @State private var tfPassword : String = ""
-    @State private var tfConfirmPassword : String = ""
-    @State private var tfName : String = ""
+    @Environment(\.presentationMode) var presentationMode
+    @State private var email: String = ""
+    @State private var username: String = ""
+    @State private var password : String = ""
+    @State private var confirmPassword : String = ""
+    @State private var name : String = ""
     
     @State private var selection: Int? = nil
     @State private var invalidLogin: Bool = false
@@ -34,11 +35,11 @@ struct SignUpView: View {
                     .padding()
                     .frame(maxWidth: .infinity)
                 
-                TextField("Username", text: $tfName)
+                TextField("Username", text: $name)
                 
-                TextField("Email", text: $tfEmail)
+                TextField("Email", text: $email)
                 
-                SecureField("Password", text: $tfPassword)
+                SecureField("Password", text: $password)
                 
                 Button(action: {
                     
@@ -71,13 +72,13 @@ struct SignUpView: View {
     }//body
     
     private func validateEmptyData() -> Bool{
-        if (self.tfName.isEmpty){
+        if (self.name.isEmpty){
             return false
         }
-        if self.tfEmail.isEmpty{
+        if self.email.isEmpty{
             return false
         }
-        if self.tfPassword.isEmpty{
+        if self.password.isEmpty{
             return false
         }
 
@@ -87,8 +88,7 @@ struct SignUpView: View {
     
     private func addUser(){
         print("Adding user to database")
- 
-        //self.coreDBHelper.insertPlayer(newPlayer: Player(username: self.tfName, email: self.tfEmail, password: self.tfPassword))
+        self.coreDBHelper.insertPlayer(newPlayer: Player(username: username, email: email, password: password))
 
     }
 

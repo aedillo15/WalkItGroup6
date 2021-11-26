@@ -10,9 +10,9 @@ import CoreData
 
 class CoreDBHelper : ObservableObject{
     
-    @Published var userList = [PlayerMO]()
+    @Published var playerList = [PlayerMO]()
     
-    private let ENTITY_NAME = "Player"
+    private let ENTITY_NAME = "PlayerMO"
     private let MOC : NSManagedObjectContext
     
     //singleton instance
@@ -103,20 +103,11 @@ class CoreDBHelper : ObservableObject{
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: ENTITY_NAME)
 
         fetchRequest.predicate = predicateID
-        
-        
-
-        
         do{
             let result = try self.MOC.fetch(fetchRequest)
             
             if result.count > 0{
-                var playerEntity: Player = result.first as! Player
-                if (playerEntity.username == username && playerEntity.password == password){
-                    return true
-                } else {
-                    return false
-                }
+                return ((result.first as? PlayerMO) != nil)
             }
             
         }catch let error as NSError{
@@ -124,8 +115,30 @@ class CoreDBHelper : ObservableObject{
         }
         
         return false
-
     }
-    
+        
+
+//
+//        do{
+//            let result = try self.MOC.fetch(fetchRequest)
+//
+//            if result.count > 0{
+    //              letar playerEntity: Player = result.first as! Player
+//                if (playerEntity.username == username && playerEntity.password == password){
+//                    return true
+//                } else {
+//                    return false
+//                }
+//            }
+            
+//        }catch let error as NSError{
+//            print(#function, "Unable to search for given ID \(error)")
+//        }
+//
+       // return false
+
     
 }
+    
+    
+

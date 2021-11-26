@@ -21,10 +21,9 @@ class Player: ObservableObject{
     
     init(username: String, email: String, password: String) {
 
-        self.tokenCount = 0
+        //self.tokenCount = 0
         self.username = username
         self.email = email
         self.password = password
-        //password
     }
 }

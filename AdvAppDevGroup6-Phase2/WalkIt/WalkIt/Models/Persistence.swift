@@ -22,7 +22,7 @@ struct PersistenceController {
     let container : NSPersistentContainer
     
     init(inMemory: Bool = false){
-        container = NSPersistentContainer(name: "WalkIt")
+        container = NSPersistentContainer(name: "PlayerDB")
         
         if inMemory{
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
@@ -30,7 +30,7 @@ struct PersistenceController {
         
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError?{
-                print("Unable to access CoreData UserDB. \(error)")
+                print("Unable to access CoreData PlayerDB. \(error)")
             }
         })
     }

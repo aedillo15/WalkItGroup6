@@ -19,7 +19,7 @@ final class PlayerMO: NSManagedObject{
 
 extension PlayerMO{
     func convertToPlayer() -> Player{
-        Player()//needs to be filled
+        Player(username: username, email: email, password: password)
     }
 }
 
