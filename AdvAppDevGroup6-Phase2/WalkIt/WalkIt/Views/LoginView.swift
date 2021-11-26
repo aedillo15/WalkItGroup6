@@ -47,6 +47,9 @@ struct LoginView: View {
                         if (self.coreDBHelper.verifyUserExists(username: tfName, password: tfPassword)){
                             self.selection = 1
                             print(#function, "User and password are correct")
+                        } else {
+                            self.alertMessage = "Username or Password is incorrect"
+                            self.invalidLogin = true
                         }
 
                     }else{
@@ -62,7 +65,7 @@ struct LoginView: View {
                     Alert(
                         title: Text("Error"),
                         message: Text(self.alertMessage),
-                        dismissButton: .default(Text("None of the fields can be blank"))
+                        dismissButton: .default(Text("OK my bad"))
                     )
                 }//alert
                 
