@@ -117,7 +117,6 @@
 		ADCCE708270A635F006A26B6 /* WalkIt */ = {
 			isa = PBXGroup;
 			children = (
-				ADDE2C93273F9AB700EE9BA0 /* Helpers */,
 				CEB6E8652739CA0E00F79F91 /* PlayerDB.xcdatamodeld */,
 				CE10B213272CA5B900030E7E /* Controllers */,
 				CE10B212272CA5B100030E7E /* Views */,
@@ -156,14 +155,6 @@
 			path = WalkItUITests;
 			sourceTree = "<group>";
 		};
-		ADDE2C93273F9AB700EE9BA0 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				ADDE2C94273F9AC700EE9BA0 /* LocationHelper.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		CE10B211272CA5A300030E7E /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +180,7 @@
 		CE10B213272CA5B900030E7E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				ADDE2C94273F9AC700EE9BA0 /* LocationHelper.swift */,
 				CEB6E86A2739CADB00F79F91 /* Persistence.swift */,
 				CEB6E86C2739CAFB00F79F91 /* CoreDBHelper.swift */,
 			);

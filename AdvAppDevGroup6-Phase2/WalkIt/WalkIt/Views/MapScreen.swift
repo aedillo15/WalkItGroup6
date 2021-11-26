@@ -10,6 +10,8 @@ import MapKit
 
 
 struct MapScreen: View {
+    @ObservedObject var loggedInPlayer = Player()
+
     
     @EnvironmentObject var locationHelper : LocationHelper
     //@State private var coordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 43.64253, longitude: -79.38201), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
@@ -29,7 +31,7 @@ struct MapScreen: View {
             self.locationHelper.checkPermission()
         }
         
-        Text("This is the where the main map will be displayed")
+        Text("Current Token Count: \(loggedInPlayer.tokenCount)")
     }
 }
 

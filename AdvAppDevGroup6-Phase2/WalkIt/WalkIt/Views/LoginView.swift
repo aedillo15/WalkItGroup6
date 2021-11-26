@@ -9,6 +9,9 @@ import SwiftUI
 
 struct LoginView: View {
     
+    @EnvironmentObject var coreDBHelper : CoreDBHelper
+
+    
     @State private var tfEmail: String = ""
     @State private var tfPassword : String = ""
     @State private var tfConfirmPassword : String = ""
@@ -40,8 +43,11 @@ struct LoginView: View {
                     
                     if (self.validateEmptyData()){
                         print(#function, "Data is there")
-                            
-                        self.selection = 1
+                        
+                        if (self.coreDBHelper.verifyUserExists(username: tfName, password: tfPassword)){
+                            self.selection = 1
+                            print(#function, "User and password are correct")
+                        }
 
                     }else{
                         self.alertMessage = "Username or Password is missing"
@@ -67,9 +73,6 @@ struct LoginView: View {
     
     private func validateEmptyData() -> Bool{
         if (self.tfName.isEmpty){
-            return false
-        }
-        if self.tfEmail.isEmpty{
             return false
         }
         if self.tfPassword.isEmpty{

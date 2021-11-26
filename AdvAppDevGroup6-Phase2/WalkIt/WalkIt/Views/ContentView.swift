@@ -10,6 +10,8 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var screenSelection: Int? = nil
+    @ObservedObject var loggedInPlayer = Player()
+
     
     var body: some View {
         

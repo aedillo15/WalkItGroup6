@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct SignUpView: View {
+    
+    @EnvironmentObject var coreDBHelper : CoreDBHelper
+
     @State private var tfEmail: String = ""
     @State private var tfPassword : String = ""
     @State private var tfConfirmPassword : String = ""
@@ -40,6 +43,7 @@ struct SignUpView: View {
                 Button(action: {
                     
                     if (self.validateEmptyData()){
+                        self.addUser()
                         print(#function, "Account created successfully")
                             
                         self.selection = 1
@@ -79,6 +83,13 @@ struct SignUpView: View {
 
         
         return true
+    }
+    
+    private func addUser(){
+        print("Adding user to database")
+ 
+        //self.coreDBHelper.insertPlayer(newPlayer: Player(username: self.tfName, email: self.tfEmail, password: self.tfPassword))
+
     }
 
 }
