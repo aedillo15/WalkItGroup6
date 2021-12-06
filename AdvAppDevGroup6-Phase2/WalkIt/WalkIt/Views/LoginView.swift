@@ -48,6 +48,7 @@ struct LoginView: View {
                             self.selection = 1
                             print(#function, "User and password are correct")
                         } else {
+                            print(#function, "Username \(tfName) or password \(tfPassword) is incorrect")
                             self.alertMessage = "Username or Password is incorrect"
                             self.invalidLogin = true
                         }

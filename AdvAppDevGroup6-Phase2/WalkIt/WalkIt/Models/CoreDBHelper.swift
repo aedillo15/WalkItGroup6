@@ -99,7 +99,7 @@ class CoreDBHelper : ObservableObject{
     
     func verifyUserExists(username: String, password: String) -> Bool{
         
-        let predicateID = NSPredicate(format: "username = %@", username)
+        let predicateID = NSPredicate(format: "username == %@ && password == %@", username, password)
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: ENTITY_NAME)
 
         fetchRequest.predicate = predicateID
@@ -108,7 +108,7 @@ class CoreDBHelper : ObservableObject{
             let result = try self.MOC.fetch(fetchRequest)
 
             if result.count > 0{
-                  var playerEntity: Player = result.first as! Player
+                  var playerEntity: PlayerMO = result.first as! PlayerMO
                 if (playerEntity.username == username && playerEntity.password == password){
                     return true
                 } else {
