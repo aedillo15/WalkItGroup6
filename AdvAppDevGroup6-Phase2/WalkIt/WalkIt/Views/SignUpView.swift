@@ -10,21 +10,18 @@ import SwiftUI
 struct SignUpView: View {
     
     @EnvironmentObject var coreDBHelper : CoreDBHelper
-    @Environment(\.presentationMode) var presentationMode
     @State private var email: String = ""
     @State private var username: String = ""
     @State private var password : String = ""
     @State private var confirmPassword : String = ""
     @State private var name : String = ""
     
-    @State private var selection: Int? = nil
     @State private var invalidLogin: Bool = false
     @State private var alertMessage = ""
     
     var body: some View {
         
         VStack{
-            NavigationLink(destination: ContentView(), tag: 1, selection: self.$selection){}
             
             Form{
                 
@@ -47,8 +44,6 @@ struct SignUpView: View {
                         self.addUser()
                         print(#function, "Account created successfully")
                             
-                        self.selection = 1
-
                     }else{
                         self.alertMessage = "All the data is required."
                         self.invalidLogin = true
