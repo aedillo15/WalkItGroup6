@@ -20,6 +20,7 @@
 		CE10B219272CA81D00030E7E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10B218272CA81D00030E7E /* Player.swift */; };
 		CE498B9E27398FAC00D031B7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE498B9D27398FAC00D031B7 /* LoginView.swift */; };
 		CE498BA027398FBB00D031B7 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE498B9F27398FBB00D031B7 /* SignUpView.swift */; };
+		CE7282C1275D4A3D00DDD799 /* UpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7282C0275D4A3D00DDD799 /* UpdateView.swift */; };
 		CEB6E8672739CA0E00F79F91 /* PlayerDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEB6E8652739CA0E00F79F91 /* PlayerDB.xcdatamodeld */; };
 		CEB6E8692739CAA600F79F91 /* PlayerMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB6E8682739CAA600F79F91 /* PlayerMO.swift */; };
 		CEB6E86B2739CADB00F79F91 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB6E86A2739CADB00F79F91 /* Persistence.swift */; };
@@ -63,6 +64,7 @@
 		CE10B218272CA81D00030E7E /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		CE498B9D27398FAC00D031B7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CE498B9F27398FBB00D031B7 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		CE7282C0275D4A3D00DDD799 /* UpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateView.swift; sourceTree = "<group>"; };
 		CEB6E8662739CA0E00F79F91 /* PlayerDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlayerDB.xcdatamodel; sourceTree = "<group>"; };
 		CEB6E8682739CAA600F79F91 /* PlayerMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerMO.swift; sourceTree = "<group>"; };
 		CEB6E86A2739CADB00F79F91 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Persistence.swift; path = WalkIt/Models/Persistence.swift; sourceTree = SOURCE_ROOT; };
@@ -173,6 +175,7 @@
 				CE10B214272CA66A00030E7E /* SettingsScreen.swift */,
 				CE498B9D27398FAC00D031B7 /* LoginView.swift */,
 				CE498B9F27398FBB00D031B7 /* SignUpView.swift */,
+				CE7282C0275D4A3D00DDD799 /* UpdateView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				CE10B215272CA66A00030E7E /* SettingsScreen.swift in Sources */,
 				CE498B9E27398FAC00D031B7 /* LoginView.swift in Sources */,
 				CEB6E86D2739CAFB00F79F91 /* CoreDBHelper.swift in Sources */,
+				CE7282C1275D4A3D00DDD799 /* UpdateView.swift in Sources */,
 				CE10B217272CA6D800030E7E /* Token.swift in Sources */,
 				CE0997A1270B973B0064069D /* MapScreen.swift in Sources */,
 				ADDE2C95273F9AC700EE9BA0 /* LocationHelper.swift in Sources */,

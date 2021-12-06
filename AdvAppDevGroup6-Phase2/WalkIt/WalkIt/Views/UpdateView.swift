@@ -1,14 +1,13 @@
 //
-//  SignUpView.swift
+//  UpdateView.swift
 //  WalkIt
 //
-//  Created by user on 2021-11-08.
+//  Created by Bilal Amir on 2021-12-05.
 //
 
 import SwiftUI
 
-struct SignUpView: View {
-    
+struct UpdateView: View {
     @EnvironmentObject var coreDBHelper : CoreDBHelper
     @Environment(\.presentationMode) var presentationMode
     @State private var email: String = ""
@@ -28,24 +27,40 @@ struct SignUpView: View {
             
             Form{
                 
-                Text("Sign Up")
+                Text("Account Information")
                     .foregroundColor(.blue)
                     .fontWeight(.bold)
                     .font(.system(size: 30))
                     .padding()
                     .frame(maxWidth: .infinity)
                 
-                TextField("Username", text: $username)
+                Text("Username: \(self.username)")
                 
-                TextField("Email", text: $email)
+                Text("Email: \(self.email)")
                 
-                SecureField("Password", text: $password)
+                Text("Password: *******" )
+                
+                
+                Text("Update information")
+                    .foregroundColor(.blue)
+                    .fontWeight(.bold)
+                    .font(.system(size: 30))
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                
+                TextField("New Username", text: $name)
+                
+                TextField("Email Change", text: $email)
+                
+                SecureField("New Password", text: $password)
+                
+//                SecureField("Confirm Password", text: confirmPassword)
                 
                 Button(action: {
                     
                     if (self.validateEmptyData()){
-                        self.addUser()
-                        print(#function, "Account created successfully")
+                        self.updateUser()
+                        print(#function, "Account updated successfully")
                             
                         self.selection = 1
 
@@ -62,14 +77,14 @@ struct SignUpView: View {
                     Alert(
                         title: Text("Error"),
                         message: Text(self.alertMessage),
-                        dismissButton: .default(Text("None of the fields can be blank"))
+                        dismissButton: .default(Text("None of the fields can be blank, if you are not updating please put your old information"))
                     )
                 }//alert
-                
                 Spacer()
             }//Form
         }//VStack
     }//body
+
     
     private func validateEmptyData() -> Bool{
         if (self.username.isEmpty){
@@ -81,21 +96,24 @@ struct SignUpView: View {
         if self.password.isEmpty{
             return false
         }
+//        if (self.password !== self.confirmPassword){
+//            return false
+//        }
 
         
         return true
     }
     
-    private func addUser(){
-        print("Adding user to database")
+    private func updateUser(){
+        print("Update user to database")
         self.coreDBHelper.insertPlayer(newPlayer: Player(username: username, email: email, password: password))
 
     }
 
 }
 
-struct SignUpView_Previews: PreviewProvider {
+struct UpdateView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpView()
+        UpdateView()
     }
 }

@@ -117,27 +117,6 @@ class CoreDBHelper : ObservableObject{
         return false
     }
         
-
-//
-//        do{
-//            let result = try self.MOC.fetch(fetchRequest)
-//
-//            if result.count > 0{
-    //              letar playerEntity: Player = result.first as! Player
-//                if (playerEntity.username == username && playerEntity.password == password){
-//                    return true
-//                } else {
-//                    return false
-//                }
-//            }
-            
-//        }catch let error as NSError{
-//            print(#function, "Unable to search for given ID \(error)")
-//        }
-//
-       // return false
-
-    
 }
     
     
