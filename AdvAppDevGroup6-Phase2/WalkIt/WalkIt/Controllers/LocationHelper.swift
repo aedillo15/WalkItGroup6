@@ -6,25 +6,30 @@
 //
 
 import Foundation
+import Combine
 import CoreLocation
 import MapKit
 import Contacts
+
+
 
 class LocationHelper: NSObject, ObservableObject, CLLocationManagerDelegate{
     @Published var authorizationStatus: CLAuthorizationStatus = .notDetermined
     @Published var address : String = "unknown"
     @Published var currentLocation : CLLocation?
     
+    @Published var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.442626, longitude: -121.891), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+    
     let locationManager = CLLocationManager()
     private let geocoder = CLGeocoder()
     private var lastSeenLocation: CLLocation?
-    
     override init() {
         super.init()
         
         if (CLLocationManager.locationServicesEnabled()){
             self.locationManager.delegate = self
             self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            self.locationManager.startUpdatingLocation()
         }
         
         //check for permission
@@ -53,16 +58,14 @@ class LocationHelper: NSObject, ObservableObject, CLLocationManagerDelegate{
         
         switch self.locationManager.authorizationStatus{
         case .denied:
-            self.requestPermission()
+            print("You have denied this app location permission. Go into settings to change it.")
         case .notDetermined:
             self.requestPermission()
         case .restricted:
-            self.requestPermission()
-        case .authorizedAlways:
+            print("Your location is likely due to parental controls")
+        case .authorizedAlways, .authorizedWhenInUse:
             //get location updates
-            self.locationManager.startUpdatingLocation()
-        case .authorizedWhenInUse:
-            //get location updates
+            region = MKCoordinateRegion(center: locationManager.location!.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
             self.locationManager.startUpdatingLocation()
         default:
             break
@@ -71,6 +74,7 @@ class LocationHelper: NSObject, ObservableObject, CLLocationManagerDelegate{
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         print(#function, "Authorization Status : \(manager.authorizationStatus.rawValue)")
+        checkPermission()
         self.authorizationStatus = manager.authorizationStatus
     }
     
@@ -106,4 +110,5 @@ class LocationHelper: NSObject, ObservableObject, CLLocationManagerDelegate{
         
         mapView.addAnnotation(mapAnnotation)
     }
+    
 }
