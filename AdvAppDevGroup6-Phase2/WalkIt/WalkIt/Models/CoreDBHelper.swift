@@ -96,10 +96,31 @@ class CoreDBHelper : ObservableObject{
             print(#function, "No matching record found for given playerID \(updatedPlayer.id!)")
         }
     }
+    func loginAs(username: String, password: String) -> PlayerMO?{
+        let predicateID = NSPredicate(format: "username == %@ && password == %@", username, password)
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: ENTITY_NAME)
+        fetchRequest.predicate = predicateID
+        
+        var playerEntity: PlayerMO
+        
+        
+        do{
+            let result = try self.MOC.fetch(fetchRequest)
+
+            playerEntity = result.first as! PlayerMO
+            return playerEntity
+  
+            
+        }catch let error as NSError{
+            print(#function, "Unable to search for given ID \(error)")
+        }
+        return nil
+    }
+    
     
     func verifyUserExists(username: String, password: String) -> Bool{
         
-        let predicateID = NSPredicate(format: "username = %@", username)
+        let predicateID = NSPredicate(format: "username == %@ && password == %@", username, password)
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: ENTITY_NAME)
 
         fetchRequest.predicate = predicateID
@@ -108,7 +129,7 @@ class CoreDBHelper : ObservableObject{
             let result = try self.MOC.fetch(fetchRequest)
 
             if result.count > 0{
-                  var playerEntity: Player = result.first as! Player
+                  var playerEntity: PlayerMO = result.first as! PlayerMO
                 if (playerEntity.username == username && playerEntity.password == password){
                     return true
                 } else {

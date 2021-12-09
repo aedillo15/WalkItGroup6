@@ -11,7 +11,8 @@ struct LoginView: View {
     
     @EnvironmentObject var coreDBHelper : CoreDBHelper
 
-    
+    @EnvironmentObject var loggedInPlayer : Player
+
     @State private var tfEmail: String = ""
     @State private var tfPassword : String = ""
     @State private var tfConfirmPassword : String = ""
@@ -45,9 +46,11 @@ struct LoginView: View {
                         print(#function, "Data is there")
                         
                         if (self.coreDBHelper.verifyUserExists(username: tfName, password: tfPassword)){
+                            //self.loggedInPlayer = self.coreDBHelper.loginAs(username: tfName, password: tfPassword)!
                             self.selection = 1
                             print(#function, "User and password are correct")
                         } else {
+                            print(#function, "Username \(tfName) or password \(tfPassword) is incorrect")
                             self.alertMessage = "Username or Password is incorrect"
                             self.invalidLogin = true
                         }
